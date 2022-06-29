@@ -1,0 +1,36 @@
+.avatar {
+    width: 100px!important;
+    height: 100px!important;
+}
+
+.avatar-highlight {
+    width: 100%;
+    height: 100%;
+    padding: 15%;
+    object-fit: cover;
+}
+
+.text-highlight {
+    text-align: center;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.gender {
+    padding-right: 5px;
+}
+
+ion-content#bg {
+    --background: #DFF6FF;
+}
+
+.border-radius {
+    border-radius: 10px;
+}
+
+.card {
+    /* height: 100px; */
+    border-radius: 10px;
+    
+}

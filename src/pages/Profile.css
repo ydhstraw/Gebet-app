@@ -1,0 +1,56 @@
+.button-icon {
+    padding-right: 10px;
+}
+
+.avatar-profile {
+    border-radius: 100%;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.text-profile {
+    text-align: center;
+}
+
+ion-button#instagram {
+    --background: #C13584;
+}
+
+ion-button#twitter {
+    --background: #1DA1F2;
+}
+
+ion-button#facebook {
+    --background: #4267B2;
+}
+
+ion-button#linkedin {
+    --background: #0e76a8;
+}
+
+ion-button#github {
+    --background: #171515;
+}
+
+ion-button#youtube {
+    --background: #FF0000;
+}
+
+ion-button#spotify {
+    --background: #1DB954;
+}
+
+
+ion-content#bg {
+    --background: none;
+    background-image: url('../../public/assets/images/bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    
+.border-radius {
+    border-radius: 10px;
+}

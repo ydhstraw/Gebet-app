@@ -1,5 +1,5 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 
@@ -22,19 +22,33 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+
+/* Pages & Components */
+import Menu from './components/Menu';
+import Profile from './pages/Profile';
+import Target_Pasangan from './pages/Target_Pasangan';
+import FriendsContextProvider from './components/ContextProvider'
+
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
+      <IonSplitPane contentId="main">
+        <Menu/>
+        <IonRouterOutlet id="main">
+          <FriendsContextProvider>
+            <Route exact path="/home">
+              <Home />
+            </Route>
+            <Route exact path="/">
+              <Redirect to="/home" />
+            </Route>
+            <Route path="/profile" component={Profile}/>
+            <Route path="/target-pasangan" component={Target_Pasangan}/>
+          </FriendsContextProvider>
+        </IonRouterOutlet>
+      </IonSplitPane>
     </IonReactRouter>
   </IonApp>
 );
